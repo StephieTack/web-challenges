@@ -1,0 +1,14 @@
+/* --card-bg: #228b22;
+--card-text: #fff; */
+
+.cards {
+  width: 45%;
+}
+
+.card-item {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 240px;
+  color: var(--card-text);
+}

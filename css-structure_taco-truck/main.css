@@ -1,0 +1,18 @@
+/* --main-bg: #ffebcd;
+--main-text #fff:;
+--main-title-bg: #663399; */
+
+.cardslist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-title {
+  color: var(--main-text);
+  background-color: var(--main-title-bg);
+  width: fit-content;
+  padding: 12px;
+  margin-top: 0;
+}

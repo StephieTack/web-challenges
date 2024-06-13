@@ -1,0 +1,6 @@
+.header {
+  background-color: var(--header-bg);
+  width: fit-content;
+  padding-inline: 16px;
+  color: var(--header-text);
+}
