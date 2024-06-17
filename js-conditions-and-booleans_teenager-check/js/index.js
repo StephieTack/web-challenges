@@ -18,6 +18,7 @@ button.addEventListener("click", () => {
   // });
 
   // Variante 2
-  const ageMessage = age >= 13 && age <= 18 ? "ja issa." : "nein issa nicht";
+  const ageMessage = age >= 13 && age <= 18 ? "ja teen." : "nein kein teen";
   output.textContent = ageMessage;
+  console.log(ageMessage, age);
 });
