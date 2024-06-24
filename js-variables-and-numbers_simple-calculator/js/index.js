@@ -13,11 +13,12 @@ const divideButton = document.querySelector('[data-js="divide"]');
 const exponentButton = document.querySelector('[data-js="exponent"]');
 const moduloButton = document.querySelector('[data-js="modulo"]');
 
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", function operation(operand1, operand2) {
   // 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
   let sum = operand1 + operand2;
-  console.log(sum);
+  return sum;
 });
+console.log(operation(2, 4));
 
 subtractButton.addEventListener("click", () => {
   // 2. Subtract the two operands and store the result in a variable. Log the variable's value to the console.
