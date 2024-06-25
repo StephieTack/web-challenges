@@ -46,3 +46,13 @@ function calculateScrollPercentage() {
 document.addEventListener("scroll", () => {
   progressBar.style.width = calculateScrollPercentage() + "%";
 });
+
+
+function checkInputLength(inputString) {
+  if (inputString.length > 3) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(checkInputLength("lksfjkl)");
