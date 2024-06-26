@@ -21,20 +21,15 @@ const switchButton = document.querySelector('[data-js="button-switch"]');
 
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
-});
-
-lowercaseButton.addEventListener("click", () => {
-  firstInput.value = firstInput.value.toLowerCase();
-});
-
-uppercaseButton.addEventListener("click", () => {
   secondInput.value = secondInput.value.toUpperCase();
 });
 
 lowercaseButton.addEventListener("click", () => {
+  firstInput.value = firstInput.value.toLowerCase();
   secondInput.value = secondInput.value.toLowerCase();
 });
 
+// Weg geht zwar, ist aber wohl umstänglich gelöst
 switchButton.addEventListener("click", () => {
   if (firstInput.value === firstInput.value.toUpperCase()) {
     firstInput.value = firstInput.value.toLowerCase();
@@ -50,3 +45,10 @@ switchButton.addEventListener("click", () => {
     secondInput.value = secondInput.value.toUpperCase();
   }
 });
+
+
+// switchButton.addEventListener("click", () => {
+//   const valueFirst = firstInput.value;
+//   firstInput.value = secondInput.value;
+//   secondInput.value = valueFirst;
+// });

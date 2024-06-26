@@ -35,3 +35,9 @@ testButton.addEventListener("click", () => {
   const newValue = oldValue.toUpperCase();
   inputField.value = newValue;
 });
+
+// geht auch so, finde ich auch logischer:
+
+// testButton.addEventListener("click", () => {
+//   inputField.value = inputField.value.toUpperCase();
+// });
