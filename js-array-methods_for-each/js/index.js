@@ -19,15 +19,33 @@ const colors = [
   "#A5A5A5",
 ];
 
-console.log(colors);
+// console.log(colors);
 
-function renderColorBox(hexcolor) {
-  const div = document.createElement("div");
-  div.textContent = hexcolor;
-  div.classList.add("color-box");
-  div.textContent = hexcolor;
-  div.style.backgroundColor = hexcolor;
-  document.body.append(div);
+// function renderColorBox(hexcolor) {
+//   const div = document.createElement("div");
+//   div.textContent = hexcolor;
+//   div.classList.add("color-box");
+//   div.textContent = hexi;
+//   div.style.backgroundColor = hexcolor;
+//   document.body.append(div);
+// };
+
+// colors.forEach(renderColorBox);
+
+// solotion from neueFische
+// Task 1
+colors.forEach((color) => {
+  const colorBoxDiv = document.createElement("div");
+  colorBoxDiv.classList.add("color-box");
+  colorBoxDiv.style = `background-color: ${color}`;
+  document.body.append(colorBoxDiv);
+});
+
+// Task 2
+function renderColorBox(color) {
+  const colorBoxDiv = document.createElement("div");
+  colorBoxDiv.classList.add("color-box");
+  colorBoxDiv.style = `background-color: ${color}`;
+  document.body.append(colorBoxDiv);
 }
-
 colors.forEach(renderColorBox);

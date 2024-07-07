@@ -1,10 +1,10 @@
 console.clear();
 
 const form = document.querySelector('[data-js="form"]');
+console.log("form:", form);
 const tosError = document.querySelector('[data-js="tos-error"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
-//  new constant for success message
-const successMessage = document.querySelector('[data-js="success"]');
+const success = document.querySelector('[data-js="success"]');
 
 function hideTosError() {
   tosError.setAttribute("hidden", "");
@@ -14,47 +14,54 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
-// new functions for sucess message
-function hideTosSuccess() {
-  successMessage.setAttribute("hidden", "");
+function hideSuccess() {
+  success.setAttribute("hidden", "");
 }
 
-function showTosSuccess() {
-  successMessage.removeAttribute("hidden");
+function showSuccess() {
+  success.removeAttribute("hidden");
 }
 
-// prevents to show the error and success messages while opening the page
-document.addEventListener("DOMContentLoaded", () => {
-  hideTosError();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  hideTosSuccess();
-});
+// Fehlermeldung intial verstecken
+hideTosError();
+hideSuccess();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // --v-- write your code here --v-
+  // --v-- write your code here --v--
 
+  // Umwandlung in Object
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
-  console.log(data);
-  // decides if an error or sucessmessage is shown or not, based on the checkbox
+  console.log("data:", data);
+  // Fehlermeldung erst bei Submit anzeigen
+  showTosError();
 
-  const statusCheckbox = data.tos;
-  if (statusCheckbox) {
-    console.log("button is on");
-    hideTosError();
-    showTosSuccess();
-  } else {
-    console.log("button not checked");
-    showTosError();
-    hideTosSuccess();
+  // Prüfen, ob TOS Checkbox angeklickt ist, wenn ja dann return, wenn nicht, dann alert
+  if (!tosCheckbox.checked) {
+    return;
   }
 
-  // --^-- write your code here --^--
-
-  // eslint-disable-next-line no-alert
   alert("Form submitted");
+  showSuccess();
+
+  // Form leeren nach Submit
+  event.target.reset();
+  const formElements = event.target.elements;
+  formElements.firstName.focus();
 });
+
+tosCheckbox.addEventListener("input", (event) => {
+  console.log(event.target.checked); //check, ob true or false
+
+  if (event.target.checked) {
+    hideTosError();
+  } else {
+    showTosError();
+  }
+  // --^-- write your code here --^--
+});
+
+// eslint-disable-next-line no-alert
+alert("Form submitted");
