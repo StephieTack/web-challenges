@@ -29,6 +29,6 @@ async function showData() {
   });
 }
 
-// data.find((color) => color.startsWith("g"));
+// data.find((color) => color.startsWith("g"));    das geht leider so noch nicht
 
 showData();

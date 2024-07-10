@@ -42,7 +42,23 @@ const cards = [
 
 /////////////////////////////////////////////////////
 // solution from neue Fische
-const lowerCaseAnswers = cards.map((card) => card.answer.toLowerCase()); // ['as often as you like.', ...]
+// const lowerCaseAnswers = cards.map((card) => card.answer.toLowerCase()); // ['as often as you like.', ...]
+
+// Konvertiere die Antworten in Kleinbuchstaben mit einer normalen Funktion
+// const lowerCaseAnswers = cards.map(function(card) {
+//   return card.answer.toLowerCase();
+// });
+// console.log(lowerCaseAnswers);
+
+// Definition der benannten Funktion
+function convertAnswerToLowerCase(card) {
+  return card.answer.toLowerCase();
+}
+// Verwendung der benannten Funktion in map
+const lowerCaseAnswers = cards.map(convertAnswerToLowerCase);
+console.log(lowerCaseAnswers);
+
+
 
 const questionsAndAnswersTogether = cards.map(
   (card) => `${card.question} - ${card.answer}`
@@ -55,3 +71,7 @@ const questionAndAnswer = cards.map((card) => {
 console.log(lowerCaseAnswers);
 console.log(questionsAndAnswersTogether);
 console.log(questionAndAnswer);
+
+function lowerzwei() {
+  const variable = cards.map
+}

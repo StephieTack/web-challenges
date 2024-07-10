@@ -51,31 +51,3 @@ endpoints.forEach((endpoint) => {
     }
   });
 });
-
-function add3Numbers(first, second, third) {
-  const sum = first + second + third;
-  return sum;
-}
-
-const firstSum = add3Numbers(1, 2, 3);
-console.log(add3Numbers(1, 2, 4));
-// the return value is stored in "firstSum", namely 6
-
-const secondSum = add3Numbers(4, 123, 33);
-// the return value is now stored in "secondSum", namely 160
-console.log(secondSum);
-
-function checkInputLength(i) {
-  if (i.length > 3) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(checkInputLength("heyjo"));
-
-function testFunction() {
-  return "a returned string";
-  console.log("I am never logged in the console.");
-}
-console.log(testFunction);
