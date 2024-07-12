@@ -39,3 +39,43 @@ zooAnimals.forEach((animal) => {
   tag.textContent = animal;
   animalList.append(tag);
 });
+
+function greeting(name) {
+  console.log(name);
+}
+
+greeting("stephie");
+greeting("felix");
+greeting("leon");
+
+console.clear();
+
+function greetAll() {
+  greeting("alma");
+  greeting("olga");
+}
+
+greetAll();
+
+function shoutAll(platzhalter) {
+  console.log(platzhalter.toUpperCase() + "!!!!!");
+}
+
+function shoutAtAll() {
+  shoutAll("ingrid");
+  shoutAll("birgit");
+}
+console.log(shoutAtAll());
+
+// function greetMorePerson() {
+//   greeting("stephie")
+// }
+
+// greetMorePerson("stephie")
+
+const pets = ["bird", "cat", "dog", "ferret", "fish"];
+pets.forEach((pet) => {
+  const petElement = document.createElement("p");
+  petElement.textContent = pet;
+  document.body.append(petElement);
+});
