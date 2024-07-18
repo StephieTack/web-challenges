@@ -62,8 +62,54 @@ function getDayColor() {
 displayyy.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
 
-function sum(a, b) {
-  return a + b;
+console.log("hello");
+console.clear();
+
+function fizzBizz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "fizzbizz";
+  }
+  if (number % 3 === 0) {
+    return "fizz";
+  }
+  if (number % 5 === 0) {
+    return "bizz";
+  } else {
+    return number;
+  }
 }
-const value = sum(1, 2);
-console.log(sum);
+
+console.log(fizzBizz(2));
+console.clear();
+
+// Liste von Benutzern
+const users = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+];
+
+// Funktion, die eine Liste von Benutzern verarbeitet
+function processUsers(users, callback) {
+  for (let i = 0; i < users.length; i++) {
+    // Jeden Benutzer verarbeiten und die Callback-Funktion aufrufen
+    callback(users[i]);
+  }
+}
+
+// Eine Callback-Funktion, die den Benutzer als Argument erhält und seinen Namen ausgibt
+function printUserName(user) {
+  console.log("Benutzername: " + user.name);
+}
+
+// Eine andere Callback-Funktion, die den Benutzer als Argument erhält und sein Alter ausgibt
+function printUserAge(user) {
+  console.log("Alter: " + user.age);
+}
+
+// Verwendung von processUsers mit verschiedenen Callback-Funktionen
+console.log("Ausgabe der Benutzernamen:");
+processUsers(users, printUserName);
+
+console.log("\nAusgabe der Alter der Benutzer:");
+processUsers(users, printUserAge);
