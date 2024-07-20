@@ -36,3 +36,8 @@ switchButton.addEventListener("click", () => {
   firstInput.value = newSecondInput;
   secondInput.value = newFirstInput;
 });
+
+// so gehts auch kürzer:
+// switchButton.addEventListener("click", () => {
+//   [firstInput.value, secondInput.value] = [secondInput.value, firstInput.value];
+// });
