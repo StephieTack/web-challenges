@@ -1,23 +1,36 @@
+// import "./styles.css";
+
+// function Greeting({ name, isCoach }) {
+//   let coach = null;
+//   if (isCoach) {
+//     coach = <span>hello coach</span>;
+//   }
+//   return (
+//     { Coach }
+//     {name}
+//   )
+// }
+
+// export default function App() {
+//   return (
+//     <>
+//       <Greeting name="Stephie" />
+//       <Greeting name="Andrea" />
+//     </>
+//   );
+// }
+
+// // {isCoach ? "Hello" + }
+
 import "./styles.css";
 
-function Greeting({ name, isCoach }) {
-  let coach = null;
-  if (isCoach) {
-    coach = <span>hello coach</span>;
-  }
-  return (
-    { Coach }
-    {name}
-  ) 
+export default function App() {
+  return <Greeting name="Felix" />;
 }
 
-export default function App() {
+function Greeting({ name }) {
+  const coaches = ["Andrea", "Felix", "Stephie"];
   return (
-    <>
-      <Greeting name="Stephie" />
-      <Greeting name="Andrea" />
-    </>
+    <h1>{coaches.includes(name) ? "Hello, Coach!" : `Hello, ${name}!`}</h1>
   );
 }
-
-// {isCoach ? "Hello" + }
