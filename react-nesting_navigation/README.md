@@ -1,8 +1,5 @@
 # React Nesting: Navigation
 
-For now, there is a navigation in the `./src/App.js` file which only uses built-in React components.
-
-Let's refactor to use custom components instead; you will encounter the `children` prop and recap props in general.
 
 ## Task
 
