@@ -2,22 +2,14 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <Sum valueA={4} valueB={7} />;
+  return <UserCard name="Stephie" isFavorite />;
 }
 
-// function Sum({ valueA, valueB }) {
-//   return (
-//     <h1>
-//       {valueA} + {valueB} = {valueA + valueB}
-//     </h1>
-//   );
-// }
-
-function Sum({ valueA, valueB }) {
-  const result = valueA + valueB;
+function UserCard({ name, isFavorite }) {
   return (
-    <h1>
-      {valueA}+{valueB}={result}
-    </h1>
+    <div>
+      {name}
+      {isFavorite ? <span>🌟</span> : null}
+    </div>
   );
 }
