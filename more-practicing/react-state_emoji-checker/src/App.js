@@ -1,46 +1,23 @@
-import React, { useState } from "react";
-import "./styles.css";
+const { useState } = require("react");
 
-export default function App() {
-  const [code, setCode] = useState("");
+function SearchForm() {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const validCode = "🐡🐠🐋";
-
-  function handleClick(event) {
-    const newCode = code + event.target.textContent;
-    setCode(newCode);
-    console.log("update code:", newCode);
+  function handleSubmit() {
+    event.preventDefault();
+    console.log("A new search term was submitted:", searchTerm);
   }
 
-  const handleReset = () => {
-    setCode("");
-  };
-
   return (
-    <div className="container">
-      <div className="button-container">
-        <button type="button" onClick={handleClick}>
-          <span role="img" aria-label="Pufferfish">
-            🐡
-          </span>
-        </button>
-        <button type="button" onClick={handleClick}>
-          <span role="img" aria-label="Whale">
-            🐋
-          </span>
-        </button>
-        <button type="button" onClick={handleClick}>
-          <span role="img" aria-label="Clownfish">
-            🐠
-          </span>
-        </button>
-      </div>
-
-      <button type="button" onClick={handleReset}>
-        Reset
-      </button>
-
-      {code === validCode && <p>Valid code!</p>}
-    </div>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="searchTerm">Search</label>
+      <input
+        name="searchTerm"
+        id="searchTerm"
+        value={searchTerm}
+        onChange={(event) => setSearchTerm(event.target.value)}
+      />
+      <button>Search for {searchTerm}</button>
+    </form>
   );
 }
