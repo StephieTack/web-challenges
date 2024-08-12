@@ -1,0 +1,23 @@
+import logo from "../img/logo.jpg";
+import Image from "./Image";
+import Link from "./Link";
+
+export default function Logo() {
+  return (
+    <Link>
+      <Image src={logo} alt={"logo"} />
+    </Link>
+  );
+}
+
+// import Image from "./Image";
+// import Link from "./Link";
+// import logo from "../img/logo.jpg";
+
+// export default function Logo() {
+//   return (
+//     <Link>
+//       <Image src={logo} alt={"Logo"} />
+//     </Link>
+//   );
+// }
