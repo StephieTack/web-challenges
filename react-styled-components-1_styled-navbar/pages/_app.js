@@ -13,6 +13,14 @@ const StyledList = styled.ul`
   gap: 1rem;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration-line: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -34,11 +42,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-
-const StyledLink = styled(Link)`
-  text-decoration-line: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
