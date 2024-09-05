@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }) {
   // }
 
   // so ist es in der Demo gemacht worden:
+
   function handleToggle(id) {
     setLights(
       lights.map((light) => {

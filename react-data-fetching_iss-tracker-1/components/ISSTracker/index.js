@@ -25,6 +25,7 @@ export default function ISSTracker() {
     return <h1>Error: {error}</h1>;
   }
 
+  // fetching without swr:
   // const [coords, setCoords] = useState({
   //   longitude: 0,
   //   latitude: 0,
